@@ -10,36 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var TipLabel: UILabel!
-    @IBOutlet weak var Totallabel: UILabel!
-    @IBOutlet weak var BillField: UITextField!
+    @IBOutlet weak var Tip: UILabel!
+    @IBOutlet weak var Total: UILabel!
+    @IBOutlet weak var Bill: UITextField!
     @IBOutlet weak var TipControll: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+   
+    @IBAction func onTap(_ sender: Any) {
+          
+          view.endEditing(true)
+      }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
 
-    @IBAction func onTap(_ sender: Any) {
-        
-        view.endEditing(true)
-    }
-    
-    
-    
-    @IBAction func CalculateTip(_ sender: Any) {
+  @IBAction func CalculateTip(_ sender: Any) {
         
         let tipPorcentajes = [0.15, 0.2, 0.25]
-        let bill = Double(BillField.text!) ?? 0
+        let bill = Double(Bill.text!) ?? 0
         let tip = bill * tipPorcentajes[TipControll.selectedSegmentIndex]
         let total = bill + tip
-        TipLabel.text = String(format: "$%.2f", tip)
-        Totallabel.text = String(format: "$%.2f", total)
+        Tip.text = String(format: "$%.2f", tip)
+        Total.text = String(format: "$%.2f", total)
     }
     
     

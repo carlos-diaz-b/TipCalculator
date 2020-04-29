@@ -10,7 +10,6 @@
         <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -38,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zv8-jw-ztN">
-                                <rect key="frame" x="20" y="288" width="374" height="19"/>
+                                <rect key="frame" x="20" y="288" width="374" height="6"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -80,6 +79,11 @@
                                     <action selector="CalculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="iZa-gk-f47"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mx-GX-xjB">
+                                <rect key="frame" x="119" y="302" width="178" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -92,12 +96,13 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="aYL-lw-zQ0"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="BillField" destination="F29-Kt-1Oa" id="iHz-aY-Abn"/>
+                        <outlet property="Bill" destination="F29-Kt-1Oa" id="iHz-aY-Abn"/>
+                        <outlet property="Tip" destination="q4e-fJ-gFp" id="Cwa-eo-llL"/>
                         <outlet property="TipControll" destination="GLg-NA-n2Y" id="rZ7-Ar-Qzt"/>
-                        <outlet property="TipLabel" destination="q4e-fJ-gFp" id="Cwa-eo-llL"/>
-                        <outlet property="Totallabel" destination="plm-wv-6ni" id="von-n8-T9U"/>
+                        <outlet property="Total" destination="plm-wv-6ni" id="von-n8-T9U"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="JqQ-I5-EII">
                     <connections>
                         <action selector="onTap:" destination="BYZ-38-t0r" id="dCy-Fn-JDa"/>
